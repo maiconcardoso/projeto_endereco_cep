@@ -49,6 +49,86 @@
             <h2>Cadastre seu endereço</h2>
             <p>Preencha os campos para podermos enviar os seus produtos</p>
         </div>
+        <form id="address-form">
+            <div class="row mb-3">
+
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control shadow-none" name="cep" id="cep" placeholder="Digite seu CEP"
+                        minlength="8" maxlength="8" required>
+                    <label for="cep">Digite seu CEP</label>
+                </div>
+                <div class="form-floating col-12 col-sm-6 mb-3 mb-sm-0">
+                    <input type="text" class="form-control shadow-none" name="address" id="address" placeholder="Rua"
+                        disabled required data-input>
+                    <label for="rua">Rua</label>
+                </div>
+
+                <div class="form-floating col-12 col-sm-6 mb-3">
+                    <input type=" text" class="form-control shadow-none" name="number" id="number" placeholder="Número"
+                        required data-input>
+                    <label for="number">Digite o número da residência</label>
+                </div>
+            </div>
+            <div class="row mb-3">
+
+                <div class="form-floating col-12 col-sm-6 mb-3 mb-sm-0">
+                    <input type="text" class="form-control shadow-none" name="complement" id="complement"
+                        placeholder="Digite o complemento" minlength="8" maxlength="8">
+                    <label for="cep">Digite o complemento</label>
+                </div>
+                <div class="form-floating col-12 col-sm-6 mb-3 mb-sm-0">
+                    <input type="text" class="form-control shadow-none" name="neighborhood" id="neighborhood"
+                        placeholder="Bairro" disabled required data-input>
+                    <label for="rua">Bairro</label>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+
+                <div class="form-floating col-12 col-sm-6 mb-3 mb-sm-0">
+                    <input type="text" class="form-control shadow-none" name="city" id="city" placeholder="Cidade"
+                        minlength="8" maxlength="8" required disabled>
+                    <label for="cep">Cidade</label>
+                </div>
+                <div class="form-floating col-12 col-sm-6 mb-3 mb-sm-0">
+                    <select name="region" id="region" class="form-select shadow-none" disabled required data-input>
+                        <option selected>Estado</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                        <option value="AM">Amazonas</option>
+                        <option value="BA">Bahia</option>
+                        <option value="CE">Ceará</option>
+                        <option value="DF">Distrito Federal</option>
+                        <option value="ES">Espírito Santo</option>
+                        <option value="GO">Goiás</option>
+                        <option value="MA">Maranhão</option>
+                        <option value="MT">Mato Grosso</option>
+                        <option value="MS">Mato Grosso do Sul</option>
+                        <option value="MG">Minas Gerais</option>
+                        <option value="PA">Pará</option>
+                        <option value="PB">Paraíba</option>
+                        <option value="PR">Paraná</option>
+                        <option value="PE">Pernambuco</option>
+                        <option value="PI">Piauí</option>
+                        <option value="RJ">Rio de Janeiro</option>
+                        <option value="RN">Rio Grande do Norte</option>
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="RO">Rondônia</option>
+                        <option value="RR">Roraima</option>
+                        <option value="SC">Santa Catarina</option>
+                        <option value="SP">São Paulo</option>
+                        <option value="SE">Sergipe</option>
+                        <option value="TO">Tocantins</option>
+                        <option value="EX">Estrangeiro</option>
+                    </select>
+                </div>
+            </div>
+            <div class="d-flex justify-content-end">
+                <button id="save-btn" type="submit" class="btn btn-primary">Salvar</button>
+            </div>
+        </form>
     </div>
 </body>
+
 </html>
