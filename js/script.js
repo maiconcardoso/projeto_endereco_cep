@@ -1,4 +1,4 @@
-const addreessForm = document.querySelector("#address-form");
+const addressForm = document.querySelector("#address-form");
 const cepInput = document.querySelector("#cep");
 const addressInput = document.querySelector("#address");
 const cityInput = document.querySelector("#city");
@@ -47,7 +47,7 @@ const getAddress = async (cep) => {
             toggleDisabled();
         }
 
-        addreessForm.reset();
+        addressForm.reset();
         toggleLoader();
         // Show message
         toggleMessage("CEP inválido, tente novamente!");;
@@ -103,3 +103,18 @@ const toggleMessage = (msg) => {
 closeButton.addEventListener("click", () => {
     toggleMessage();
 });
+
+// Save Address
+addressForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    toggleLoader();
+
+    setTimeout(() => {
+        toggleLoader();
+        toggleMessage("Endereço salvo com sucesso!");
+        addressForm.reset();
+        toggleDisabled();
+    }, 1500)
+})
+
